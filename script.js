@@ -22,4 +22,16 @@ function checkTime() {
     }
   }
 }
-console.log(moment().hours());
+console.log(localStorage);
+
+function saveEntry(id) {
+  let key = id;
+  let inputValue = document.getElementById(`${id}`).value;
+  localStorage.setItem(`${key}`, inputValue);
+}
+function displayEntry() {
+  for (let i = 9; i < 18; i++) {
+    document.getElementById(`${i}`).value = localStorage.getItem(`${i}`);
+  }
+}
+displayEntry();
