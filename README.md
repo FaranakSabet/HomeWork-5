@@ -15,3 +15,5 @@ WHEN I click the save button for that timeblock
 THEN the text for that event is saved in local storag
 WHEN I refresh the page
 THEN the saved events persist
+
+![](hw-5.PNG)
