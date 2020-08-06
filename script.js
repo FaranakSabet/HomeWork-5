@@ -10,10 +10,16 @@ setInterval(() => {
   checkTime();
 }, 500);
 function checkTime() {
-  for (let i = 9; i < 17; i++) {
-    if (i > moment().format("h")) {
+  for (let i = 9; i < 18; i++) {
+    if (i > moment().hours()) {
+      document.getElementById(`${i}`).style.backgroundColor = "green";
+    }
+    if (i === moment().hours()) {
       document.getElementById(`${i}`).style.backgroundColor = "red";
+    }
+    if (i < moment().hours()) {
+      document.getElementById(`${i}`).style.backgroundColor = "gray";
     }
   }
 }
-console.log(moment().format("h"));
+console.log(moment().hours());
